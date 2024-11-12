@@ -1,0 +1,263 @@
+.is-focus {
+    box-shadow: 0 0 0 1px #089C6B inset !important;
+}
+@media screen and (min-width: 880px) {
+    // 根容器
+    .root-container {
+        box-sizing: border-box;
+        flex-shrink: 0;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 15% 85%;
+        width: 90%;
+        min-width: 300px;
+        margin-bottom: 20px;
+        padding: 20px 40px 20px 20px;
+        background-color: #f9f9ff;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(175, 175, 175, 0.1),
+        0 6px 20px rgba(175, 175, 175, 0.1);
+
+        /*  头像栏 */
+        aside {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* 帖子栏 */
+        main {
+
+            // 用户名和标签
+            header {
+                // height: 40px;
+                color: rgb(8, 156, 107);
+
+                // 标签
+                .tag-container {
+                    display: flex;
+                    margin: 2px;
+                }
+            }
+
+            // 帖子内容
+            article {
+                font-size: 16px;
+                margin-bottom: 10px;
+                //width: 255px;
+            }
+
+            .img-container {
+                width: 314px;
+                display: flex;
+                flex-wrap: wrap;
+
+                .img-element {
+                    width: 100px;
+                    height: 100px;
+                    margin: 2px;
+                }
+            }
+
+            // 按钮和评论区
+            footer {
+                //width: 255px;
+                margin-top: 15px;
+
+                // 创建时间-点赞-评论-删除-按钮
+                .time-and-btns-container {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    // 创建时间
+                    .create-time {
+                        color: #089C6B;
+                        font-size: .85em;
+                    }
+
+                    // 按钮外间距
+                    span {
+                        .el-button {
+                            margin: 0 1.5px !important;
+                        }
+                    }
+
+                    // 点赞按钮红色--放在了index.html
+                    // .heart-btn-highlight svg path {
+                    //     fill: red;
+                    // }
+
+                    // 自定义徽章位置
+                    .custom-badge {
+                        position: relative;
+
+                        sup {
+                            position: absolute;
+                            /* 使徽章绝对定位 */
+                            top: 0;
+                            transform: translate(-45%, -50%);
+                            /* 调整徽章的位置 */
+                            z-index: 1;
+                            /* 保证徽章在按钮上方显示 */
+                        }
+                    }
+                }
+
+                // 评论区
+                .comment-section {
+                    overflow: hidden;
+                    transition: height .5s ease !important;
+
+                    // 评论
+                    .comment {
+                        cursor: pointer;
+                        margin: 5px 0;
+
+                        .commentAuthor,
+                        .commentTarget {
+                            color: #089C6B;
+                            cursor: pointer;
+                        }
+                    }
+
+                    // 创建新评论容器
+                    .create-comment-container {
+                        margin-top: 10px;
+
+                    }
+                }
+            }
+        }
+    }
+}
+// 移动端
+@media screen and (max-width: 880px) {
+    // 根容器
+    .root-container {
+        box-sizing: border-box;
+        flex-shrink: 0;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 15% 85%;
+        width: 90%;
+        min-width: 300px;
+        margin-bottom: 20px;
+        padding: 20px 40px 20px 20px;
+        background-color: #f9f9ff;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(175, 175, 175, 0.1),
+        0 6px 20px rgba(175, 175, 175, 0.1);
+
+        /*  头像栏 */
+        aside {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* 帖子栏 */
+        main {
+
+            // 用户名和标签
+            header {
+                // height: 40px;
+                color: rgb(8, 156, 107);
+
+                // 标签
+                .tag-container {
+                    display: flex;
+                    margin: 2px;
+                }
+            }
+
+            // 帖子内容
+            article {
+                font-size: 16px;
+                margin-bottom: 10px;
+                //width: 255px;
+            }
+
+            .img-container {
+                width: 224px;
+                display: flex;
+                flex-wrap: wrap;
+
+                .img-element {
+                    width: 70px;
+                    height: 70px;
+                    margin: 2px;
+                }
+            }
+
+            // 按钮和评论区
+            footer {
+                //width: 255px;
+                margin-top: 15px;
+
+                // 创建时间-点赞-评论-删除-按钮
+                .time-and-btns-container {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    // 创建时间
+                    .create-time {
+                        color: #089C6B;
+                        font-size: .85em;
+                    }
+
+                    // 按钮外间距
+                    span {
+                        .el-button {
+                            margin: 0 1.5px !important;
+                        }
+                    }
+
+                    // 点赞按钮红色--放在了index.html
+                    // .heart-btn-highlight svg path {
+                    //     fill: red;
+                    // }
+
+                    // 自定义徽章位置
+                    .custom-badge {
+                        position: relative;
+
+                        sup {
+                            position: absolute;
+                            /* 使徽章绝对定位 */
+                            top: 0;
+                            transform: translate(-45%, -50%);
+                            /* 调整徽章的位置 */
+                            z-index: 1;
+                            /* 保证徽章在按钮上方显示 */
+                        }
+                    }
+                }
+
+                // 评论区
+                .comment-section {
+                    overflow: hidden;
+                    transition: height .5s ease !important;
+
+                    // 评论
+                    .comment {
+                        cursor: pointer;
+                        margin: 5px 0;
+
+                        .commentAuthor,
+                        .commentTarget {
+                            color: #089C6B;
+                            cursor: pointer;
+                        }
+                    }
+
+                    // 创建新评论容器
+                    .create-comment-container {
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
